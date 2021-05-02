@@ -1,0 +1,6 @@
+
+.datatable .col {
+    cursor: pointer;
+    background-color: rgb(72, 119, 189);
+    color: white;
+}

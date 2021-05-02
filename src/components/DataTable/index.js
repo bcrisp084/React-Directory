@@ -1,15 +1,19 @@
-import REACT, { useContext } from "react";
+import React, { useContext } from "react";
 import DataBody from "../DataBody";
-import "./DateTable.css";
+import "./DataTable.css";
 import DataAreaContext from "../../utils/DataAreaContext";
 
 const DataTable = () => {
     const context = useContext(DataAreaContext);
+
     return (
 
-    <div className="datatable mt-5">
-        <table id="table" className="table table-striped table-hover table-condensed">
-        <thead>
+        <div className="datatable mt-5">
+            <table
+                id="table"
+                className="table table-striped table-hover table-condensed"
+            >
+                <thead>
                     <tr>
                         {context.developerState.headings.map(({ name, width }) => {
                             return (
@@ -30,7 +34,9 @@ const DataTable = () => {
                 </thead>
 
                 <DataBody />
-        </table>
-    </div>
-    )
-};
+            </table>
+        </div>
+    );
+}
+
+export default DataTable;
